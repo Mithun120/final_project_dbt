@@ -4,6 +4,8 @@
     tags=['mart', 'mart']
 )}}
 
+--average rating in feedback like for the project how the employee is getting satisfied
+
 WITH cleanedFeedback AS (
     SELECT
         *
