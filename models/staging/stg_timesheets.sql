@@ -1,0 +1,5 @@
+{{
+    config(
+        tags=['basic', 'staging']
+    )
+}}

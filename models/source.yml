@@ -1,0 +1,17 @@
+version: 2
+sources: 
+  - name: final_project_data_engineeering
+    database: TIMESHEET
+    schema: TIMESHEETFEEDBACK
+    tables:
+    - name: USERS
+      description: "Table containing details of the employees"
+    - name: PROJECTS
+      description: "Project Details"
+    - name: ALLOCATEPROJECTS
+      description: "Project Allocation"
+    - name: TIMESHEETS
+      description: "Timesheet data filling"
+    - name: FEEDBACKS
+      description: "Feedback"
+     
