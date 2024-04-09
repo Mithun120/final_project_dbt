@@ -11,8 +11,8 @@ stageProjects as (
     select 
     projectname  ,
     projectid,
-    startdate,
-    enddate
+    DATE(startdate) AS startdate,
+        DATE(enddate) AS enddate
     from stageProject
 )
 

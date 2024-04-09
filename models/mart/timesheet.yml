@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: Timesheet
+    description: |
+      CTE to calculate daily activity metrics.
+    columns:
+      - name: UID
+        description: Unique identifier.
+        tests:
+          - unique
+      - name: email
+        description: Employee email.
+      - name: projectid
+        description: Project ID.
+      - name: activity
+        description: Type of activity.
+      - name: comments
+        description: Activity comments.
+      - name: start_period
+        description: Start period of activity.
+        type: date
+      - name: end_period
+        description: End period of activity.
+        type: date
+      - name: mon
+        description: Monday activity.
+        type: int
+      - name: tue
+        description: Tuesday activity.
+        type: int
+      - name: wed
+        description: Wednesday activity.
+        type: int
+      - name: thur
+        description: Thursday activity.
+        type: int
+      - name: fri
+        description: Friday activity.
+        type: int
+      - name: sat
+        description: Saturday activity.
+        type: int
+      - name: sun
+        description: Sunday activity.
+        type: int
+    materialized: table
+    tags:
+      - mart
+      - kpi
+
+  - name: average_daily_activity
+    description: |
+      CTE to calculate average daily activity.
+    columns:
+      - name: UID
+        description: Unique identifier.
+        tests:
+          - unique
+      - name: email
+        description: User email.
+      - name: avg_daily_activity
+        description: Average daily activity.
+        type: numeric
+    materialized: table
+    tags:
+      - mart
+      - kpi
+
+seeds: []
+

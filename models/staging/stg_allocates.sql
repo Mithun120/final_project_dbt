@@ -11,8 +11,8 @@ stageProjectAllocation as (
     select 
     email ,
     projectid,
-    allocation_start,
-    allocation_end
+    DATE(allocation_start) AS allocation_start,
+    DATE(allocation_end) AS allocation_end
     from stageAllocation
 )
 
