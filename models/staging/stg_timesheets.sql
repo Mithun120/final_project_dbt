@@ -23,7 +23,8 @@ stageTimesheets as (
     TRY_CAST (thur as int) as thur,
     TRY_CAST (fri as int) as fri,
     TRY_CAST (sat as int) as sat,
-    TRY_CAST (sun as int) as sun
+    TRY_CAST (sun as int) as sun,
+    visible
     from stageTimesheet
 
 )

@@ -1,32 +1,22 @@
 {{ config(
     materialized='table',
-    tags=['mart', 'mart']
+    tags=['main', 'mart']
 )}}
-
-WITH 
-cleanedFeedback AS (
+with 
+stg_feedbacks AS (
     SELECT
         *
     FROM {{ ref('stg_feedbacks') }}
 ),
-users as (
+stg_users as (
      SELECT
         *
     FROM {{ ref('stg_users') }}
 ),
 merge as (
-    select b.name,a.email,
-        CASE 
-            WHEN a.feedback_status = 'Feedback not filled' THEN 1  -- You can use 1 or any other value as per your requirement
-            ELSE 0
-        END AS feedback_not_filled
-    from stg_feedbacks a 
-    left join stg_users b on a.email = b.email
+    select a.email,a.role,b.Q1 from stg_users a right join stg_feedbacks b on a.email=b.email
 ),
-feedback_count as (
-    select name, count(feedback_not_filled) as feedback_not_filled_count 
-    from merge 
-    group by name 
-    having sum(feedback_not_filled) > 0  -- Filter for feedbacks that are not filled
+final as (
+    select role as Role,count(Q1) as Feedback_Count from merge group by role
 )
-select * from feedback_count
+select * from final

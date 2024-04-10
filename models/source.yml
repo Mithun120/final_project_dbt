@@ -2,7 +2,7 @@ version: 2
 sources: 
   - name: final_project_data_engineeering
     database: TIMESHEET
-    schema: TIMESHEETFEEDBACK
+    schema: FAKEDATA
     tables:
     - name: USERS
       description: "Table containing details of the employees"
