@@ -22,6 +22,7 @@ kpi AS (
         q5,
         q6,
         comments,
+        
         start_period,
         end_period,
         {{ feedback_kpi('q1', 'q2', 'q3', 'q4', 'q5', 'q6') }} AS meetKpi

@@ -1,0 +1,15 @@
+version : 2
+models:
+  - name : Avg work hour
+    description : Avg work hour of an employee
+    columns:
+      - name: email
+        description : email of the employee
+        tests:
+          - unique
+          - not_null
+      - name: AVG_HOURS_WORKED_PER_DAY
+        description : AVG_HOURS_WORKED_PER_DAY
+        tests:
+          - not_null
+      

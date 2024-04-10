@@ -8,7 +8,7 @@ sources:
       description: "Table containing details of the employees"
     - name: PROJECTS
       description: "Project Details"
-    - name: ALLOCATEPROJECTS
+    - name: PROJECTALLOCATION
       description: "Project Allocation"
     - name: TIMESHEETS
       description: "Timesheet data filling"

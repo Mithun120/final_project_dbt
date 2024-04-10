@@ -5,7 +5,7 @@
 }}
 
 WITH stageAllocation as (
-    select * from {{ ref('prep_allocate')}}
+    select * from {{ ref('prep_allocate')}} 
 ),
 stageProjectAllocation as (
     select 

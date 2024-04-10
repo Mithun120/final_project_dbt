@@ -1,3 +1,10 @@
+
+{{ config(
+    materialized='table',
+    tags=['mart', 'main']
+)}}
+
+
 WITH project_hours AS (
     SELECT
         p.projectId,
@@ -11,6 +18,7 @@ WITH project_hours AS (
 ),
 project_duration AS (
     SELECT
+
         projectId,
         DATEDIFF(day, MIN(startDate), MAX(endDate)) AS duration_days
     FROM

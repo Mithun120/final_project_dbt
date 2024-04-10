@@ -1,0 +1,22 @@
+version : 2
+models:
+  - name : Project Efficiency Ratio
+    description : Indicates the efficiency of each project by comparing the actual hours worked on the project to the total hours allocated for it.
+    columns:
+      - name: PROJECTNAME
+        description : Name of the Project
+        tests:
+          - not_null
+      - name: STARTDATE
+        description : start date of the project
+        tests:
+          - not_null
+      - name: ENDDATE
+        description : END date of the project
+        tests:
+          - not_null
+      - name: PROJECT_EFFICIENCY_RATIO
+        description : PER
+        tests:
+          - not_null
+      

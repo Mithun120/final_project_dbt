@@ -1,0 +1,14 @@
+version : 2
+models:
+  - name : EMPLOYEE ENGAGEMENT
+    description : measure the level of engagement, satisfaction, and commitment that employees have towards their work and the organization
+    columns:
+      - name: ROLE
+        description : Role of the Employess grouped
+        tests:
+          - not_null
+      - name: score
+        description : engagement score
+        tests:
+          - not_null
+      
