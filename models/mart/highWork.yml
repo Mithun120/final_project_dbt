@@ -1,0 +1,15 @@
+version : 2
+models:
+  - name : High hours worked
+    description : displays top high hours worked
+    columns:
+      - name: email
+        description : Mail of the employee
+        tests:
+          - unique
+          - not_null
+      - name: total_hours_worked
+        description : total hours worked
+        tests:
+          - not_null
+     
